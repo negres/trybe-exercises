@@ -1,0 +1,39 @@
+body {
+  font-size: 16px;
+
+  line-height: 1.5;
+  text-decoration: solid;
+  text-align: center;
+}
+
+h1 {
+  font-size: 65px;
+  color: orange;
+  font-family: sans-serif;
+}
+
+p {
+  font-size: 3em;
+  font-weight: 600;
+  
+}
+
+ul {
+  background-color: #6C8EAD;
+}
+
+.changeColor {
+  background-color: #a23e48;
+}
+
+#yellow {
+  background-color: yellow;
+}
+
+#red {
+  background-color: red;
+}
+
+#brown {
+  background-color: brown;
+}
