@@ -107,3 +107,52 @@ zoomDayIn();
 zoomDayOut();
 
 // EXERCÍCIO 7
+
+function addNewTask(param) {
+  let mytask = document.createElement('span')
+  mytask.innerText = param;
+  document.querySelector('.my-tasks').appendChild(mytask);
+}
+addNewTask('cozinhar')
+
+// EXERCÍCIO 8
+function addSubtitle(param) {
+  let colorDiv = document.createElement('div');
+  colorDiv.className = 'task';
+  colorDiv.style.backgroundColor = param;
+  document.querySelector('.my-tasks').appendChild(colorDiv);
+}
+addSubtitle('green');
+
+// EXERCÍCIO 9
+function selectedSubtitleSpan () {
+  let element = document.querySelector('.task');
+  element.addEventListener('click', function () {
+    if (element.className === 'task selected'){
+      element.className = 'task';
+      console.log('nao esta selecionada')
+    } else if (element.className === 'task') {
+      element.classList.add('selected')
+      console.log('selecionada')
+    }    
+  })
+}
+selectedSubtitleSpan()
+
+// EXERCÍCIO 10
+function selectedTaskDay () {
+  let selectedDay = document.querySelectorAll('.day');
+  let colorSubtitleSpan = document.querySelector('.task').style.backgroundColor
+  for (let day = 0; day < selectedDay.length; day +=1) {
+    selectedDay[day].addEventListener('click', function () {     
+      if (selectedDay[day].style.backgroundColor === colorSubtitleSpan) {
+        selectedDay[day].style.backgroundColor = '';
+        selectedDay[day].style.color = ''
+      } else {
+        selectedDay[day].style.backgroundColor = colorSubtitleSpan
+        selectedDay[day].style.color = 'white'
+      }
+    })
+  }
+}
+selectedTaskDay()
