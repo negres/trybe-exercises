@@ -141,18 +141,54 @@ selectedSubtitleSpan()
 
 // EXERCÍCIO 10
 function selectedTaskDay () {
-  let selectedDay = document.querySelectorAll('.day');
+  let selectDays = document.querySelectorAll('.day');
   let colorSubtitleSpan = document.querySelector('.task').style.backgroundColor
-  for (let day = 0; day < selectedDay.length; day +=1) {
-    selectedDay[day].addEventListener('click', function () {     
-      if (selectedDay[day].style.backgroundColor === colorSubtitleSpan) {
-        selectedDay[day].style.backgroundColor = '';
-        selectedDay[day].style.color = ''
+  for (let day = 0; day < selectDays.length; day +=1) {
+    selectDays[day].addEventListener('click', function () {     
+      if (selectDays[day].style.backgroundColor === colorSubtitleSpan) {
+        selectDays[day].style.backgroundColor = '';
+        selectDays[day].style.color = ''
       } else {
-        selectedDay[day].style.backgroundColor = colorSubtitleSpan
-        selectedDay[day].style.color = 'white'
+        selectDays[day].style.backgroundColor = colorSubtitleSpan
+        selectDays[day].style.color = 'white'
       }
     })
   }
 }
 selectedTaskDay()
+
+// EXERCÍCIO BONUS
+// task-input = campo input
+// btn-add = button
+// task-list-container
+
+function addAppointment () {
+  let textAppointment = document.querySelector('#task-input');
+  let addAppointments = document.querySelector('#btn-add');
+  let taskListContainer = document.querySelector('.task-list');
+
+  addAppointments.addEventListener('click', function () {
+
+    if (textAppointment.value.length > 0) {
+      let newTagLi = document.createElement('li');
+      newTagLi.innerText = textAppointment.value;
+
+      taskListContainer.appendChild(newTagLi);
+      textAppointment.value = '';
+    } else {
+      alert('Digite ao menos 1 caractere.')
+    }
+  })
+
+  textAppointment.addEventListener('keyup', function(event) {
+    if (event.keyCode === 13 && textAppointment.value.length > 0) {
+      let newTagLi = document.createElement('li');
+      newTagLi.innerText = textAppointment.value;
+
+      taskListContainer.addEventListener(newTagLi);
+      textAppointment.value = '';
+    }
+  })
+}
+addAppointment ();
+
