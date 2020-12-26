@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0 auto;
+  transition: background-color 300ms linear;
+  width: 60vw;
+}
+
+.header {
+  align-items: center;
+  border-bottom: 3px solid #f1f1a1;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  width: 100%;
+}
+
+.dark {
+  background-color: #312c51!important;
+  color: white!important;
+}
+/* TOGGLE */
+.checkbox {
+  display: none;
+  position: absolute;
+}
+
+.label {
+  background-color: #201c35;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 50px;
+  padding: 5px;
+  height: 26px;
+  width: 50px;
+  position: relative;
+}
+
+.fa-moon {
+  color: #f1f1a1;
+  font-size: 16px;
+}
+
+.fa-sun {
+  color: #ffff73;
+  font-size: 16px;
+}
+
+.ball {
+  background-color: #fff;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  height: 22px;
+  width: 22px;
+  position: absolute;
+  transition: transform 200ms linear;
+}
+
+.checkbox:checked + .label .ball {
+  transform: translateX(24px);
+}
+
+/* END TOGGLE */
+
+/* ARTICLE */
+
+.article {
+  padding: 50px 20px;
+}
+
+.article h2 {
+  font-size: 32px;
+  padding-bottom: 50px;
+  text-align: center;
+}
+
+.form {
+  align-items: center;
+  border-top: 3px solid #f1f1a1;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  left: 0;
+  gap: 20px;
+  padding: 20px;
+}
+
+.fontsize input{
+  width: 50px;
+}
+
+.lineheight input {
+  width: 50px;
+}
