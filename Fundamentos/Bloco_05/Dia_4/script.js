@@ -30,10 +30,10 @@ function handleChange(event) {
   const name = event.target.name;
   const value = event.target.value;
   handleStyle[name](value);
-  savaValues(name, value);
+  saveValues(name, value);
 }
 
-function savaValues(name, value) {
+function saveValues(name, value) {
   localStorage[name] = value;
 }
 
