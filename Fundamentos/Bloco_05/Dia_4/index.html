@@ -5,65 +5,89 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+    crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Roboto:wght@400;500;700&family=Ubuntu:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <title>Javascript - Web Storage</title>
 </head>
 
 <body>
   <header class="header">
-    <h1 class="header-title">The Lorem Ipsuns - Jornal</h1>
+    <h1>Web Storage</h1>
+    <nav>
+      <div class="darkmode">
+        <input type="checkbox" class="checkbox" id="checkbox">
+        <label for="checkbox" class="label">
+          <i class="fas fa-moon"></i>
+          <i class="fas fa-sun"></i>
+          <div class="ball"></div>
+        </label>
+      </div>
+    </nav>
   </header>
-  <article class="article">
-    <header class="article-header">
-      <h1 class="article-header-title">Lorem Ipsum History</h1>
-    </header>
-    <section class="section-text">
-      <p class="section-paragrafos">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure vel provident, ut non quas iste nam nostrum
-        alias omnis, repudiandae, molestiae sapiente deserunt expedita animi reprehenderit hic distinctio quia tenetur?
-        Natus cum dolores, veritatis labore maxime aspernatur ducimus excepturi delectus aperiam perspiciatis velit
-        optio sit reprehenderit ipsum laboriosam totam expedita repellat ex adipisci eligendi fugit suscipit quos!
-        Quasi, quibusdam. Dolorum. <br>
-        Provident error, natus animi laborum officia obcaecati saepe vel ullam sequi harum corporis hic beatae eligendi
-        non cumque suscipit officiis accusantium quaerat autem sint. Veritatis vero voluptate soluta nihil ut.
-        Quaerat placeat recusandae aperiam, unde quia facere nam expedita distinctio similique possimus eaque veritatis.
-        Exercitationem laboriosam fugit est commodi fuga temporibus corrupti, minus, ducimus quos unde aspernatur,
-        facere autem saepe!
-        Debitis aliquam labore dolorem et in delectus excepturi fuga consequatur odit! Debitis corporis in, fugit,
-        maxime ipsam nihil placeat quas unde numquam quia voluptatem recusandae architecto? Facilis necessitatibus
-        ratione deleniti.
+  <main>
+    <article class="article">
+      <h2>localStorage</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et aperiam sequi quaerat inventore. Quaerat voluptatem
+        repudiandae ipsa exercitationem laboriosam et dicta reiciendis facilis unde, praesentium ab? Quasi modi suscipit
+        tempora!</p>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima quaerat reiciendis excepturi corrupti. Dolor
+        beatae praesentium totam distinctio nisi, ipsa nobis mollitia eaque? Omnis eos quam commodi sequi nesciunt
+        velit.Dignissimos, reprehenderit nostrum laudantium consequuntur, velit placeat expedita, magni quia corrupti
+        aliquam adipisci! Consequuntur tempora reprehenderit nostrum? Officiis magnam suscipit sunt, ipsum
+        necessitatibus, quidem minima omnis dignissimos praesentium odit porro?</p>
+      <br>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, totam itaque modi earum laudantium iusto
+        obcaecati eligendi, ab nemo adipisci dicta repellat, minus nihil laborum debitis expedita laboriosam. Dicta,
+        obcaecati.
+        Similique esse nobis dolorum atque tempora et deleniti eveniet quo debitis numquam! Dicta similique harum sit
+        nesciunt vero corporis a voluptatem doloribus perspiciatis voluptate, rerum libero praesentium perferendis
+        nostrum autem!
+        Assumenda ipsam, fugit iusto laudantium deleniti magni sequi magnam ut tempora quidem laborum, obcaecati, quia
+        voluptatum. Alias corporis quia officia, ex aut nesciunt sapiente quis sequi, quo impedit cumque consectetur?
       </p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia nostrum inventore itaque molestias error rem
-        nesciunt ad ratione? Dolores omnis voluptas rem laudantium eaque? Vero magnam debitis illo eveniet ipsa!
-        Nihil, qui soluta illum totam, et vel exercitationem doloribus, perferendis eius temporibus non? Fuga nesciunt
-        magni reiciendis voluptas sunt, distinctio quos quis, nisi blanditiis excepturi minima, ullam repudiandae
-        pariatur rerum.
-        Aliquam numquam dolor dolorum provident nobis facilis delectus soluta accusamus, nostrum placeat inventore
-        debitis possimus id excepturi quo suscipit incidunt atque maxime nesciunt? Cupiditate quam perferendis commodi
-        temporibus veniam doloremque?
-      </p>
+      <br>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, impedit assumenda totam a aspernatur
+        ullam possimus nam magni iusto reprehenderit maxime neque, hic sequi at, est blanditiis necessitatibus beatae
+        vel. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum modi possimus nobis omnis dicta. Tenetur a
+        dolor voluptatum blanditiis quisquam amet soluta magni esse aut, cumque dicta ut odio? Rem.</p>
+    </article>
+    <section>
+      <form class="form" id="controllers">
+        <div class="bgcolor">
+          <label for="backgroundColor">Cor de fundo</label>
+          <input type="color" name="backgroundColor" id="backgroundColor">
+        </div>
+        <div class="textcolor">
+          <label for="paragraphsColor">Cor do texto</label>
+          <input type="color" name="paragraphsColor" id="paragraphsColor">
+        </div>
+        <div class="fontsize">
+          <label for="fontSize">Tamanho da fonte</label>
+          <input type="number" name="fontSize" id="fontSize">
+        </div>
+        <div class="lineheight">
+          <label for="lineHeight">Espaçamento</label>
+          <input type="number" name="lineHeight" id="lineHeight">
+        </div>
+        <div class="fontfamily">
+          Fonte
+          <select name="fontFamily" id="fontFamily">
+            <option value="Arial">Arial</option>
+            <option value="Georgia">Georgia</option>
+            <option value="monospace">Monospace</option>
+            <option value="Poppins">Poppins</option>
+            <option value="Roboto">Roboto</option>
+            <option value="Ubuntu">Ubuntu</option>
+          </select>
+        </div>
+      </form>
     </section>
-    <div class="options">
-      <div class="change-bg-color">
-        <span>Cor de fundo</span>
-        <button>white</button>
-        <button>black</button>
-        <button>green</button>
-        <button>blue</button>
-      </div>
-      <div class="change-text-color">
-        MUDAR A COR DO TEXTO
-      </div>
-      <div class="change-font-size">
-        MUDAR O TAMANHO DA FONTE
-      </div>
-      <div class="change-line-height">
-        MUDAR LINE HEIGHT
-      </div>
-      <div class="change-font">
-        MUDAR A FONTE
-      </div>
-    </div>
-  </article>
-
+  </main>
   <script src="script.js"></script>
 </body>
 

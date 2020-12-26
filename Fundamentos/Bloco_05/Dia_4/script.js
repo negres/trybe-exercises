@@ -1,48 +1,60 @@
-// MUDAR A COR DE FUNDO
-function changeBgColor (color) {
-  let container = document.querySelector('body');
-  container.style.backgroundColor = color;
-  localStorage.setItem('backgroundColor', color);
-}
-// changeBgColor('#c5c6c9')
+// Selectors
 
-function changeTextColor (color) {
-  let text = document.querySelectorAll('p');
-  for (let index = 0; index < text.length; index += 1) {
-    text[index].style.color = color;
-  }  
-}
-changeTextColor('purple');
+const checkbox = document.querySelector('#checkbox');
+const controllers = document.querySelector('#controllers');
+const body = document.querySelector('body');
 
-function changeFontSize (sizeFont, element) {
-  let fontSize = document.querySelectorAll(element);
-  for (let index = 0; index < fontSize.length; index += 1) {
-    fontSize[index].style.fontSize = sizeFont;
+const handleStyle = {
+  element: body,
+  backgroundColor(value) {
+    this.element.style.backgroundColor = value;
+  },
+  paragraphsColor(value) {
+    this.element.style.color = value;
+  },
+  fontSize(value) {
+    this.element.style.fontSize = value + 'px';
+  },
+  lineHeight(value) {
+    this.element.style.lineHeight = value + 'px';
+  },
+  fontFamily(value) {
+    this.element.style.fontFamily = value;
   }
 }
-changeFontSize('18px', 'p');
 
-function changeLineHeight (lineHeigth, element) {
-  let heigth = document.querySelectorAll(element);
-  for (let index = 0; index < heigth.length; index += 1) {
-    heigth[index].style.lineHeight = lineHeigth;
-  }
-  
+
+// Functions
+
+function handleChange(event) {
+  const name = event.target.name;
+  const value = event.target.value;
+  handleStyle[name](value);
+  savaValues(name, value);
 }
-changeLineHeight('1.5', 'p');
 
-function changeFont (fontType) {
-  let font = document.querySelectorAll('body')
-  for (let index = 0; index < font.length; index += 1) {
-    font[index].style.fontFamily = fontType;
-  }
+function savaValues(name, value) {
+  localStorage[name] = value;
 }
-changeFont('Arial');
 
-
-let btnBgColor = document.querySelectorAll('.change-bg-color>button');
-for (let index = 0; index < btnBgColor.length; index += 1) {
-  btnBgColor[index].addEventListener('click', function (event) {
-    changeBgColor(event.target.innerHTML);
+function getValues() {
+  const properties = Object.keys(localStorage);
+  properties.forEach(propertie => {
+    handleStyle[propertie](localStorage[propertie]);
+    controllers.elements[propertie].value = localStorage[propertie];
   })
 }
+getValues();
+
+// Events listener
+
+checkbox.addEventListener('change', () => {
+  document.body.classList.toggle('dark');
+  if (body.classList.contains('dark')) {
+    controllers.style.display = 'none';
+  } else {
+    controllers.style.display = ''
+  }
+});
+
+controllers.addEventListener('change', handleChange);
