@@ -23,7 +23,6 @@ const handleStyle = {
   }
 }
 
-
 // Functions
 
 function handleChange(event) {
@@ -50,10 +49,14 @@ getValues();
 
 checkbox.addEventListener('change', () => {
   document.body.classList.toggle('dark');
+  const font = body.style.fontFamily;
   if (body.classList.contains('dark')) {
+    body.style = ''
+    body.style.fontFamily = font;
     controllers.style.display = 'none';
   } else {
-    controllers.style.display = ''
+    getValues();
+    controllers.style.display = '';
   }
 });
 

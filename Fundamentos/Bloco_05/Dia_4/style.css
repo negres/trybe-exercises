@@ -23,8 +23,8 @@ body {
 }
 
 .dark {
-  background-color: #312c51!important;
-  color: white!important;
+  background-color: #312c51;
+  color: white;
 }
 /* TOGGLE */
 .checkbox {
