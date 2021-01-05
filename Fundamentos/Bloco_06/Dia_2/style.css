@@ -1,0 +1,30 @@
+body {
+  background-color: #F0F0F7;
+}
+
+hr {
+  color: #32264D;
+}
+
+label {
+  color: #747279;
+}
+
+legend {
+  color: #32264D;
+}
+
+.form-bg-color {
+  background-color: white;
+  border: 1px solid #E6E6F0;
+}
+
+.input-bg-color {
+  background-color: #FAFAFC;
+  border: 1px solid #E6E6F0;
+  border-radius: 8px;
+}
+
+.container {
+  border-radius: 8px;
+}
