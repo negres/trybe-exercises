@@ -13,29 +13,28 @@
       <legend>Dados Pessoais</legend>
 
       <label for="name">Nome</label>
-      <input type="text" name="name" id="name" required maxlength="40">
+      <input type="text" name="name" id="name" maxlength="40" required>
 
       <label for="email">Email</label>
-      <input type="text" name="email" id="email" required maxlength="50">
+      <input type="text" name="email" id="email" maxlength="50" required>
 
       <label for="cpf">CPF</label>
-      <input type="text" name="cpf" id="cpf" required maxlength="11">
+      <input type="text" name="cpf" id="cpf" maxlength="11" required>
 
       <label for="address">Endereço</label>
-      <input type="text" name="address" id="address" required maxlength="200">
+      <input type="text" name="address" id="address" maxlength="200" required>
 
       <label for="city">Cidade</label>
-      <input type="text" name="city" id="city" required maxlength="28">
+      <input type="text" name="city" id="city" maxlength="28" required>
 
       <label for="state">Estado</label>
       <select name="state" name="state" id="state" required></select>
 
-      <label for="house">
-        <input type="radio" name="property-type" id="house" required>Casa
-      </label>
-      <label for="apartment">
-        <input type="radio" name="property-type" id="apartment" required>Apartamento
-      </label>
+      <input type="radio" name="property-type" id="house">
+      <label for="house">Casa</label>
+
+      <input type="radio" name="property-type" id="apartment">
+      <label for="apartment">Apartamento</label>
 
     </fieldset>
 
@@ -55,11 +54,13 @@
       <br>
 
       <label for="date">Data de início</label>
-      <input type="date" id="date" required>
+      <input type="text" id="day" placeholder="Dia" required>
+      <input type="text" id="month" placeholder="Mês" required>
+      <input type="text" id="year" placeholder="Ano" required>
     </fieldset>
     <br>
     <button type="submit" id="btn-submit">Enviar</button>
-    <button type="reset">Limpar</button>
+    <button type="reset" id="btn-reset">Limpar</button>
   </form>
   <script src="script.js"></script>
 </body>
