@@ -1,7 +1,5 @@
 const btnSubmit = document.querySelector('#btn-submit');
 const select = document.querySelector('#state');
-const body = document.querySelector('body');
-const dados = document.querySelector('#dados-pessoais');
 
 const states = ['AC', 'AL', 'AP', 'AM', 'BA', 'CE', 'DF', 'ES', 'GO', 'MA', 'MT', 'MS', 'MG', 'PA', 'PB', 'PR', 'PE', 'PI', 'RJ', 'RN', 'RS', 'RO', 'RR', 'SC', 'SP', 'SE', 'TO'];
 
