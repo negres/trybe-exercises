@@ -14,6 +14,14 @@ legend {
   color: #32264D;
 }
 
+.header {
+  background-color: #32264D;
+  color: white;
+  padding: 30px;
+  text-align: center;
+  width: 100%;
+}
+
 .form-bg-color {
   background-color: white;
   border: 1px solid #E6E6F0;
@@ -27,4 +35,14 @@ legend {
 
 .container {
   border-radius: 8px;
+}
+
+.btn-submit {
+  background-color: #04D361;
+  color: white;
+}
+
+.btn-submit:hover {
+  background-color: #04BF58;
+  color: white;
 }
