@@ -23,17 +23,16 @@ const handleStyle = {
   }
 }
 
-
 // Functions
 
 function handleChange(event) {
   const name = event.target.name;
   const value = event.target.value;
   handleStyle[name](value);
-  savaValues(name, value);
+  saveValues(name, value);
 }
 
-function savaValues(name, value) {
+function saveValues(name, value) {
   localStorage[name] = value;
 }
 
@@ -50,10 +49,14 @@ getValues();
 
 checkbox.addEventListener('change', () => {
   document.body.classList.toggle('dark');
+  const font = body.style.fontFamily;
   if (body.classList.contains('dark')) {
+    body.style = ''
+    body.style.fontFamily = font;
     controllers.style.display = 'none';
   } else {
-    controllers.style.display = ''
+    getValues();
+    controllers.style.display = '';
   }
 });
 
