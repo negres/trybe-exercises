@@ -24,8 +24,8 @@ body {
 .menu-container {
   align-self: center;
   display: flex;
-  flex-basis: 768px;
   flex-grow: 1;
+  flex-basis: 500;
   order: 2;
 }
 
