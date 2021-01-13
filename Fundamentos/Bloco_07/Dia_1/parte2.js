@@ -44,7 +44,7 @@ const findLetterX = (param) => {
   const string = 'Tryber x aqui!';
   const result = string.replace('x', param);
   return result;
-}
+};
 // console.log(findLetterX('Natália'));
 
 // Um array com escopo global, que é o escopo do arquivo JS , nesse caso, contendo cinco strings com suas principais skills .
@@ -64,6 +64,6 @@ console.log(skills);
 const concatena = (param) => {
   const newSkills = skills.sort();
   return `${findLetterX(param)} Minhas cinco principais habilidades são: ${newSkills}`;
-}
+};
 
 console.log(concatena('Natália'));
