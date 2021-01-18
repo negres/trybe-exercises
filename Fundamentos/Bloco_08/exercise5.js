@@ -1,6 +1,7 @@
 const assert = require('assert');
 
-const books = [{
+const books = [
+  {
     id: 1,
     name: 'As Crônicas de Gelo e Fogo',
     genre: 'Fantasia',
@@ -62,17 +63,13 @@ const books = [{
   },
 ];
 
-function smallerName() {
-  let nameBook;
-  // escreva aqui o seu código
-  books.forEach((book) => {
-    if (!nameBook || book.name.length < nameBook.length) {
-      nameBook = book.name;
-    }
-  });
+const expectedResult = false
 
-  // Variável nameBook que receberá o valor do menor nome;
-  return nameBook;
+function everyoneWasBornOnSecXX() {
+  // escreva seu código aqui
+  return books.every(book => {
+    book.author.birthYear > 1900 && book.author.birthYear <= 2000;
+  });
 }
 
-assert.strictEqual(smallerName(), 'Duna');
+assert.strictEqual(everyoneWasBornOnSecXX(), expectedResult);
