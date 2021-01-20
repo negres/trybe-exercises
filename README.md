@@ -46,4 +46,26 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 - [x] 5-5: _Projeto - Arte com Pixels_
 - [x] 5-6: _Projeto - Lista de tarefas_
 
+##### Bloco 6: HTML e CSS: Forms, Flexbox e Responsivo :heavy_check_mark:
 
+- [x] 6.1: _HTML & CSS - Forms_
+- [x] 6.2: _Bibliotecas Javascript e Framewords CSS_
+- [x] 6.3: _CSS Flexbox - Parte 1_
+- [x] 6.4: _CSS Flexbox - Parte 2_
+- [x] 6.5: _CSS Responsivo - Mobile First_
+- [x] 6.6: _Projeto - Página inicial do Facebook_
+
+##### Bloco 7: Introdução à Javascript ES6 e Testes Unitários :heavy_check_mark:
+
+- [x] 7.1: _Javascript ES6 - Variáveis & Template Literals_
+- [x] 7.2: _Javascript ES6 - Objects_
+- [x] 7.3: _Testes Unitários em Javascript_
+- [x] 7.4: _Projeto - Javascript Testes Unitários_
+
+##### Bloco 8: Higher Order Functions do javascript ES6 :round_pushpin:
+
+- [x] 8.1: _Javascript ES6 - forEach, find, some, every e sort_
+- [x] 8.2: _Javascript ES6 - map e filter_
+- [ ] 8.3: _Javascript ES6 - reduce_
+- [ ] 8.4: _Javascript ES6 - spread operator, parâmetro rest, destructuring e mais_
+- [ ] 8.5: _Projeto - Zoo Functions_
