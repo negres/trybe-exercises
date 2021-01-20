@@ -10,6 +10,7 @@ function preencherEstados() {
   for(let index = 0; index < states.length; index += 1) {
     const opt = document.createElement('option');
     opt.innerText = states[index];
+    opt.value = states[index];
     select.appendChild(opt);
   }
 }
