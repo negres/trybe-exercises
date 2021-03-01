@@ -1,21 +1,27 @@
 import React from 'react';
 import './App.css';
 
-function handleClick() {
-  console.log('Clicou no botão!');
-}
-
-function handleClick2() {
-  console.log('Clicou no botão dois!');
-}
-
 class App extends React.Component {
-
-  handleClick() {
-    console.log('Cliquei no botão!');
+  constructor() {
+    super();
+    this.handleClick2 = this.handleClick2.bind(this);
+    this.state = {
+      numberClicks: 0
+    }
+    // só seta state no constructor
   }
+
+  handleClick2() {
+    this.setState((estadoAnterior, _props) => ({
+      numberClicks: estadoAnterior.numberClicks + 1
+    }));
+  }
+
   render() {
-    return <button onClick={this.handleClick}>My Button</button>;
+    console.log(this);
+    return (
+      <button onClick={this.handleClick2}>{this.state.numberClicks}</button>
+    );
   }
 }
 
